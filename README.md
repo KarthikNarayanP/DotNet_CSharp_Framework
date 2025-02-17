@@ -2,7 +2,7 @@
 
 **Automated Testing Framework** using:
 - **Selenium WebDriver**
-- **ReqNroll (BDD Framework)**
+- **ReqNroll (BDD Framework) - Since Specflow is now Retired - I have used this ReqNroll is similar to Specflow **
 - **NUnit (Test Runner)**
 - **Extent Reports (HTML Reporting)**
 - **GitHub Actions (CI/CD Automation)**
@@ -17,10 +17,9 @@
 │   │── SeleniumWebsiteNaviagtion.feature      # Example Feature for SeleniumWebsiteNaviagtion
 │
 │── 📂 StepDefinitions               # Step Definitions for BDD Scenarios
-│   │── LoginSteps.cs                 # Step Definitions for Login
-│   │── SearchSteps.cs                # Step Definitions for Search
+│   │── SeleniumWebsiteSteps.cs                 # Step Definitions for Selenium Website
 │
-│── 📂 Pages                         # Page Object Model (POM) Classes
+│── 📂 Pages                         # Page Object Model (POM) Classes -
 │   │── SeleniumPage.cs               
 │            
 │
@@ -29,7 +28,7 @@
 │   │── ExtentReportManager.cs        # HTML Reporting
 │
 │── 📂 Hooks                         # Test Hooks (Before/After Scenarios)
-│   │── TestHooks.cs                  # Setup and Teardown
+│   │── TestHooks.cs                  # Setup and Teardown - I have used Conteext Injection for Scenario Level and Feature Level, Configured it can run in Parallel Scenarios or Parallel Features.
 │
 │── 📂 Reports                       # Extent Reports (Generated)
 │
@@ -48,7 +47,7 @@
  **ReqNroll** → BDD Testing with Feature Files  
  **NUnit** → Test Execution & Assertions  
  **Extent Reports** → HTML Reports with Screenshots  
- **Parallel Execution** → Faster Test Runs  
+ **Parallel Execution** → Faster Test Runs - Every Scenario Can run in Parallel
  **GitHub Actions** → Automated Testing in CI/CD  
 
 ---
@@ -86,12 +85,3 @@ dotnet test --filter TestCategory=Regression
 ```sh
 dotnet test --settings parallel.runsettings
 ```
-
-### **4️⃣ Generate & View Reports**
-Reports are generated in `/Reports/ExtentReport.html`.  
-To open in browser:
-```sh
-start Reports/ExtentReport.html
-```
-
----
