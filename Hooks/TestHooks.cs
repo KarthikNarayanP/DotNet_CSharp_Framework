@@ -50,9 +50,9 @@ namespace ReqNollSeleniumTest.Hooks
             try
             {
                 var chromeOptions = new ChromeOptions();
-                chromeOptions.AddArgument("--headless=new");  // ✅ Runs in headless mode but supports full resolution
-                chromeOptions.AddArgument("--window-size=1920,1080");  // ✅ Ensures Desktop View (Full HD)
-                chromeOptions.AddArgument("--no-sandbox");  // ✅ Prevents permission issues
+                chromeOptions.AddArgument("--headless=new");  //  Runs in headless mode but supports full resolution
+                chromeOptions.AddArgument("--window-size=1920,1080");  //  Ensures Desktop View (Full HD)
+                chromeOptions.AddArgument("--no-sandbox");  //  Prevents permission issues
                 chromeOptions.AddArgument("--disable-dev-shm-usage");
                 _driver.Value = new ChromeDriver(chromeOptions);
 
@@ -66,13 +66,13 @@ namespace ReqNollSeleniumTest.Hooks
                 scenarioContext["ScenarioId"] = scenarioId;
 
                 ExtentTest scenarioTest;
-                lock (_lock) // ✅ Ensure thread safety
+                lock (_lock) //  Ensure thread safety
                 {
                     scenarioTest = featureTest.CreateNode(scenarioContext.ScenarioInfo.Title);
                     _scenarioReports[scenarioId] = scenarioTest;
                 }
                 
-                scenarioContext["ExtentTest"] = scenarioTest; // ✅ Store it properly
+                scenarioContext["ExtentTest"] = scenarioTest; //  Store it properly
                 var webdriverFactory = new WebdriverFactory(scenarioContext, scenarioTest);
                 scenarioContext["WebdriverFactory"] = webdriverFactory;
             }
