@@ -56,9 +56,7 @@
 ## ** Setup & Installation**
 ### **1️⃣ Prerequisites**
 Ensure you have:
-- **.NET SDK 9.0+** → [Download](https://dotnet.microsoft.com/en-us/download/dotnet)
-- **Google Chrome** → [Download](https://www.google.com/chrome/)
-- **ChromeDriver** (matches Chrome version) → [Download](https://chromedriver.chromium.org/downloads)
+- **.NET SDK 9.0+**
 
 ### **2️⃣ Clone the Repository**
 ```sh
