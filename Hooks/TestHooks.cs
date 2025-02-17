@@ -50,7 +50,7 @@ namespace ReqNollSeleniumTest.Hooks
             try
             {
                 var chromeOptions = new ChromeOptions();
-               // chromeOptions.AddArgument("--headless");
+                chromeOptions.AddArgument("--headless");
                 _driver.Value = new ChromeDriver(chromeOptions);
 
                 scenarioContext["WebDriver"] = _driver.Value;
