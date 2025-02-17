@@ -86,10 +86,12 @@ namespace ReqNollSeleniumTest.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Validate Selenium page title")]
         [NUnit.Framework.CategoryAttribute("smoke")]
+        [NUnit.Framework.CategoryAttribute("home")]
         public async System.Threading.Tasks.Task ValidateSeleniumPageTitle()
         {
             string[] tagsOfScenario = new string[] {
-                    "smoke"};
+                    "smoke",
+                    "home"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Validate Selenium page title", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 7
@@ -115,13 +117,17 @@ namespace ReqNollSeleniumTest.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Search functionality validation")]
         [NUnit.Framework.CategoryAttribute("dataDriven")]
+        [NUnit.Framework.CategoryAttribute("home")]
+        [NUnit.Framework.CategoryAttribute("regression")]
         [NUnit.Framework.TestCaseAttribute("WebDriver", "WebDriver", null)]
         [NUnit.Framework.TestCaseAttribute("Grid", "Grid", null)]
         [NUnit.Framework.TestCaseAttribute("IDE", "IDE", null)]
         public async System.Threading.Tasks.Task SearchFunctionalityValidation(string searchText, string expectedResult, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "dataDriven"};
+                    "dataDriven",
+                    "home",
+                    "regression"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));

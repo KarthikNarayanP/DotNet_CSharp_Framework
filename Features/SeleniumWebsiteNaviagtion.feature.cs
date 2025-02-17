@@ -86,13 +86,15 @@ namespace ReqNollSeleniumTest.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify navigation to multiple pages")]
         [NUnit.Framework.CategoryAttribute("regression")]
+        [NUnit.Framework.CategoryAttribute("home")]
         [NUnit.Framework.TestCaseAttribute("Projects", "Projects", null)]
         [NUnit.Framework.TestCaseAttribute("Documentation", "The Selenium Browser Automation Project", null)]
         [NUnit.Framework.TestCaseAttribute("Blog", "Blog", null)]
         public async System.Threading.Tasks.Task VerifyNavigationToMultiplePages(string linkText, string expectedTitle, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "regression"};
+                    "regression",
+                    "home"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -127,11 +129,13 @@ namespace ReqNollSeleniumTest.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify presence of navigation links")]
-        [NUnit.Framework.CategoryAttribute("dataTable")]
+        [NUnit.Framework.CategoryAttribute("smoke")]
+        [NUnit.Framework.CategoryAttribute("home")]
         public async System.Threading.Tasks.Task VerifyPresenceOfNavigationLinks()
         {
             string[] tagsOfScenario = new string[] {
-                    "dataTable"};
+                    "smoke",
+                    "home"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Verify presence of navigation links", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 19
@@ -167,10 +171,12 @@ namespace ReqNollSeleniumTest.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Validate Documentation Page Navigation")]
         [NUnit.Framework.CategoryAttribute("regression")]
+        [NUnit.Framework.CategoryAttribute("home")]
         public async System.Threading.Tasks.Task ValidateDocumentationPageNavigation()
         {
             string[] tagsOfScenario = new string[] {
-                    "regression"};
+                    "regression",
+                    "home"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Validate Documentation Page Navigation", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 29
