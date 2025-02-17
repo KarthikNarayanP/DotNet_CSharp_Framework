@@ -50,7 +50,10 @@ namespace ReqNollSeleniumTest.Hooks
             try
             {
                 var chromeOptions = new ChromeOptions();
-                chromeOptions.AddArgument("--headless");
+                chromeOptions.AddArgument("--headless=new");  // ✅ Runs in headless mode but supports full resolution
+                chromeOptions.AddArgument("--window-size=1920,1080");  // ✅ Ensures Desktop View (Full HD)
+                chromeOptions.AddArgument("--no-sandbox");  // ✅ Prevents permission issues
+                chromeOptions.AddArgument("--disable-dev-shm-usage");
                 _driver.Value = new ChromeDriver(chromeOptions);
 
                 scenarioContext["WebDriver"] = _driver.Value;
