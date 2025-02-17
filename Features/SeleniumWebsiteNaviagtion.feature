@@ -3,7 +3,7 @@ Feature: Selenium Website Navigation Validation
   I want to validate the Selenium website
   So that I can ensure its UI Naviagtion functionality work correctly
 
-  @regression
+  @regression @home
   Scenario Outline: Verify navigation to multiple pages
     Given I navigate to "https://www.selenium.dev/"
     When I click on "<LinkText>"
@@ -15,7 +15,7 @@ Feature: Selenium Website Navigation Validation
       | Documentation | The Selenium Browser Automation Project |
       | Blog          | Blog                                    |
 
-  @dataTable
+  @smoke @home
   Scenario: Verify presence of navigation links
     Given I navigate to "https://www.selenium.dev/"
     Then the following navigation links should be present:
@@ -25,7 +25,7 @@ Feature: Selenium Website Navigation Validation
       | Support       |
       | Blog          |
 
-  @regression
+  @regression @home
   Scenario: Validate Documentation Page Navigation
     Given I navigate to "https://www.selenium.dev/"
     When I click on "Documentation"

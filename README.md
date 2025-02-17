@@ -83,5 +83,5 @@ dotnet test --filter TestCategory=Regression
 
 ### **3️⃣ Run Tests in Parallel**
 ```sh
-dotnet test --settings parallel.runsettings
+dotnet test -- NUnit.NumberOfTestWorkers=6
 ```

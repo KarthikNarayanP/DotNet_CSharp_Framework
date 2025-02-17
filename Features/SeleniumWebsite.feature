@@ -3,12 +3,12 @@ Feature: Selenium Website Validation
   I want to validate the Selenium website
   So that I can ensure its UI and functionality work correctly
 
-  @smoke
+  @smoke @home
   Scenario: Validate Selenium page title
     Given I navigate to "https://www.selenium.dev/"
     Then the page title should be "Selenium"
 
-  @dataDriven
+  @dataDriven @home @regression
   Scenario Outline: Search functionality validation
     Given I navigate to "https://www.selenium.dev/"
     When I click on "Documentation"
